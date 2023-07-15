@@ -1,38 +1,464 @@
-.App {
-  text-align: center;
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html,body{
+    height: 100vh;
+    /* margin: 0px; */
+    margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root{
+    position: relative;
+    /* padding: 8px; */
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    /* gap: 8px; */
+    padding: 8px;
+    margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main_container{
+    background-color: black;
+    height: 100%;
+    display: flex;
+    gap: 8px;
+}
+.left_container{
+    background-color: black;
+    width: 23%;
+    min-width: 280px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 90%;
+    
+}
+.top_left_container{
+    background-color: rgb(18,18,18);
+    min-height: 120px;
+    min-height: 120px;
+    width: 100%;
+    border-radius: 5px;
+    height: 10%;
+}
+.top_left_container ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.9rem;
+    height: 100%;
+    justify-content: center;
+}
+.top_left_container ul li a{
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+    color: rgb(184, 181, 181);
+    text-decoration: none;
+    gap: 1rem;
+}
+.top_left_container ul li a:hover{
+    color: white;
+}
+.top_left_container ul li a span{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.bottom_left_container{
+    position: relative;
+    background-color: rgb(18,18,18);
+    height: 90%;
+    border-radius: 5px;
+}
+.add_library{
+    width: 100%;
+}
+.add_library ul{
+    display: flex;
+    display: block;
+    padding: 0.9rem;
+}
+.add_library ul li{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+.add_library ul li a{
+    color: rgb(184, 181, 181);
+    text-decoration: none;
+}
+.add_library ul li a:hover{
+    color: white;
+}
+.add_library ul li a:first-of-type{
+    display: flex;
+    font-size: 1.7rem;
+    align-items: center;
+    gap: 1rem;
+}
+.add_library ul li a:nth-of-type(2):hover{
+    background-color: rgba(128, 128, 128, 0.075);
+    border-radius: 50%;
+}
+.add_library ul li a:first-of-type span{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.right_container{
+    background-color: rgb(18,18,18);
+    width: 100%;
+    height: 90%;
+    border-radius: 5px;
+    overflow: scroll;
+}
+/* ================================lib_card=================================== */
+
+.lib_card_container{
+   
+    min-height: 120px;
+    max-height: 120px;
+    background-color: #242424;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    color: white;
+    width: 100%;
+    margin: auto;
+    border-radius: 8px;
+    line-height: 2px;
+}
+.lib_card_container h1{
+    font-size: 0.8rem;
+}
+.lib_card_container p{
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+.lib_card_container  button{
+    padding:8px;
+    width: 50%;
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border: none;
+}
+.lib_card{
+
+    min-height: 140px;
+    max-height: 140px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+/* ===================================preview==================================== */
+.p_main{
+    position: absolute;
+    bottom: 0px;
+    height: 10%;
+    width: 99%;
+    
+}
+.preview_container{
+    height: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem;
+    color: white;
+    background-image: linear-gradient(90deg,#af2896,#509bf5);
+    border-radius: 3px;
+
+}
+.p_content p{
+    font-size: 1rem;
+    line-height: 1.3rem;
+}
+.p_content p:first-of-type{
+    font-size: 0.9rem;
+}
+.p_content p:nth-of-type(2){
+    font-family: sans-serif;
+    font-weight: 500;
+}
+.p_btns button{
+        padding: 15px 30px 15px 30px;
+        border-radius: 20px;
+        border: none;
+        font-weight: 700;
+        background-color: white;
+        letter-spacing: 1px;
+        font-family: sans-serif;
+        font-size: 0.9rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* ========================left_footer============================== */
+.left_footer_container{
+    position: absolute;
+    bottom: 0px;
+    padding: 1rem;
+}
+.left_footer_container ul{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    flex-wrap: wrap;
+}
+.left_footer_container ul a{
+    text-decoration: none;
+    color: rgb(184, 181, 181);
+    font-size: 0.7rem;
+}
+.left_footer_container ul a:hover{
+    color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.bottom_left_container .btns{
+    padding: 1rem;
+    padding-left: 0px;
+}
+.bottom_left_container .btns button{
+    border: 1px solid rgba(186, 179, 179, 0.463);
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding: 8px 15px  8px 15px;
+    gap: 0.5rem;
+    border-radius: 40px;
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+}
+.bottom_left_container .btns button:hover{
+    transform: scale(1.1);
+    border: 1px solid white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bottom_left_container .btns button span{
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+
+/* ====================right_nav=========================================== */
+.right_navbar_container{
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem;
+    border-radius: 8px 8px 0px 0px;
+    align-items: center;
+    background-color: #242424;
+}
+.left_btns{
+    display: flex;
+    gap: 0.8rem;
+    
+}
+.lbtn,.rbtn{
+    height: 35px;
+    width: 35px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+}
+.right_btns{
+    display: flex;
+    gap: 1rem;
+}
+.right_btns .signup button, .login button{
+    padding: 15px 25px 15px 25px;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 550;
+    border: none;
+    background-color: white;
+    color: black;
+}
+.right_btns .signup button{
+    background-color: rgb(18,18,18);
+    color: rgb(184, 181, 181);
+}
+/* ==============================card===================== */
+.card_main{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: start;
+    height: 300px;
+    width: 220px;
+    padding: 1rem;
+    background-color: rgb(45, 45, 45);
+    border-radius: 8px;
+    gap: 0.6rem;
+}
+.c_img{
+    background-image: url("Assets/img/img1.jpeg");
+    height: 200px;
+    width: 190px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+.card_container{
+    padding: 1rem;
+}
+
+.card_main h2{
+    font-size: 1rem;
+}
+.card_main:hover{
+    background-color: rgba(156, 156, 156, 0.438);
+}
+/* =====================card_list========================== */
+.list_container{
+    padding: 1rem 1rem 1rem 1rem;
+}
+.list_head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.heading{
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+.card_main p{
+    font-size: 0.8em;
+    overflow: hidden;
+    
+
+}
+.show_list{
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgb(184, 181, 181);
+}
+
+
+/* ===================card_container============ */
+.card_container{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===================footer========================= */
+.footer_container{
+    padding: 2rem 2rem 2rem 2rem;
+   
+    border-bottom: 2px solid rgb(71, 71, 71);
+    width: 100%;
+}
+.f_year{
+    color: white;
+    padding: 2rem 1rem 4rem 1rem;
+}
+.footer_content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer_content .fl ul{
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1rem;
+    list-style-type: none;
+}
+.footer_content .fl ul li a{
+    text-decoration: none;
+    color: grey;
+}
+.footer_content .fl ul li a:hover{
+    color: white;
+}
+.footer_content .fl ul li:first-of-type{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.footer_content .fl ul li:first-of-type a{
+    color: white!important;
+
+}
+.l4{
+    display: flex;
+    gap: 1rem;
+    font-size: 2rem;
+    padding: 1rem;
+
+}
+.si{
+    height: 40px;
+    width: 40px;
+    background-color: #242424;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+::-webkit-scrollbar{
+    width: 0.2rem;
+    height: 0px;
+}
+::-webkit-slider-thumb{
+    width: 3rem;
+}
+::-webkit-scrollbar-track{
+    width: 1rem;
+    background-color: gray;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 2px;
+    background-color: aqua;
+}
+
+
+@media screen and (min-width:100px) and (max-width:768px) {
+    .left_container{
+        display: none;
+    }
+    .right_navbar_container{
+        display: none;
+    }
+    .p_main{
+        display: none;
+    }
+    .right_container{
+        height: 100%;
+    }
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    .list_head p{
+        display: none;
+    }
+    header{
+      
+        position: sticky;
+        top: 0px;
+    }
+    .list_container{
+        padding-top: 2rem;
+    }
 }

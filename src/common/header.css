@@ -1,0 +1,59 @@
+*{
+    font-family: sans-serif;
+}
+header{
+    background-color: black;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    display: none;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+    margin: auto;
+    align-items: center;
+}
+.logo{
+    font-size: 1.2rem;
+    color: white;
+
+}
+.right_nav{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+}
+.right_nav button{
+    border: none;
+    background-color: white;
+    color: black;
+    padding: 0.5rem 1rem  0.5rem 1rem;
+    border-radius: 40px;
+    
+}
+
+.bars{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+}
+
+
+@media screen and (min-width:100px) and (max-width:768px) {
+    header{
+        display: block;
+    }
+
+}
