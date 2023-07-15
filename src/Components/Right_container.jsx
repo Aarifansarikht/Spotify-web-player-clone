@@ -5,16 +5,36 @@ import Right_footer from '../common/Right_footer';
 import Mainheader from '../common/Mainheader';
 
 class Right_container extends Component {
+
+    constructor(){
+        super()
+    }
+
+    state={
+        Card_list:[
+            {heading:"Songs",show:"Show all"},
+            {heading:"Sad Songs",show:"Show all"}
+
+        ]
+    }
     render() {
         return (
             <div>
                 <Right_navbar/>
                 <Mainheader/>
                 <div className="main_content">
-                  <Card_list/>
-                  <Card_list/>
-                  <Card_list/>
-                    <Right_footer/>
+                    {
+                        // console.log(this.state.Card_list)
+                        this.state.Card_list.map((data)=>{
+                            return(
+                                <>
+                                <Card_list data={data}/>
+                                </>
+                                ) 
+                                
+                        })
+                    }
+                <Right_footer/>
                 </div>
             </div>
         );
