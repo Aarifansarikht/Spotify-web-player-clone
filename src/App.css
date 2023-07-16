@@ -299,8 +299,6 @@ html,body{
 }
 /* ==============================card===================== */
 .card_main{
-    display: flex;
-    flex-direction: column;
     color: white;
     text-align: start;
     height: 300px;
@@ -308,11 +306,18 @@ html,body{
     padding: 1rem;
     background-color: rgb(45, 45, 45);
     border-radius: 8px;
-    gap: 0.6rem;
+
+}
+.card_top_container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
 }
 .c_img{
     background-image: url("Assets/img/img1.jpeg");
-    height: 200px;
+    height: 180px;
     width: 190px;
     background-size: cover;
     background-repeat: no-repeat;
