@@ -5,6 +5,7 @@ class Card_list extends Component {
   constructor(props) {
     super(props);
   }
+
   state = {
     section1:[
       {
@@ -44,6 +45,7 @@ class Card_list extends Component {
             </div>
           </div>
           </div>
+          <div className="card_top_container">
           <div className="card_container">
            {
             // console.log(this.state.section1[0].card)
@@ -58,6 +60,8 @@ class Card_list extends Component {
             })
           }
             </div>
+          </div>
+          
             
           </>
         );

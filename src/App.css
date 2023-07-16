@@ -55,6 +55,7 @@ html,body{
     padding: 0.9rem;
     height: 100%;
     justify-content: center;
+    list-style-type: none;
 }
 .top_left_container ul li a{
     display: flex;
@@ -386,9 +387,11 @@ html,body{
 .card_container{
     display: flex;
     gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
+   overflow-x:scroll;
+  
 }
+
+
 
 /* ===================footer========================= */
 .footer_container{
@@ -489,5 +492,10 @@ html,body{
     }
     .list_container{
         padding-top: 2rem;
+    }
+    .card_container{
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow: auto;
     }
 }
