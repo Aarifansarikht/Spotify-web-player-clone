@@ -15,8 +15,8 @@ class Card_list extends Component {
         card:[
           {img: img1,h1:"Piecefil piano",p:"lorem"},
           {img: img2,h1:"Deep Focus",p:"lorem"},
-          {img: img3,h1:"blue2",p:"lorem"},
-          {img:img4,h1:"blue3",p:"lorem"},
+          {img: img3,h1:"Instrumental Study",p:"lorem"},
+          {img:img4,h1:"Focus Flow",p:"lorem"},
         ],
       }
     ],

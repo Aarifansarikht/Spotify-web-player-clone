@@ -311,9 +311,12 @@ html,body{
 
 }
 .card_top_container p{
-    height: 30px;
+    height: 40px;
     overflow: hidden;
-    color: rgb(196, 193, 193);
+    color: rgb(164, 164, 164);
+    line-height: 1.2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 .card_top_container{
     height: 100%;
