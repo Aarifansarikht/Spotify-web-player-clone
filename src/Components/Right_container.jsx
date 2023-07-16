@@ -12,8 +12,10 @@ class Right_container extends Component {
 
     state={
         Card_list:[
-            {heading:"Songs",show:"Show all"},
-            {heading:"Sad Songs",show:"Show all"}
+            {heading:"Focus",show:"Show all"},
+            {heading:"Spotify Playlists",show:"Show all"},
+            {heading:"Sound of Spotify",show:"Show all"}
+
 
         ]
     }

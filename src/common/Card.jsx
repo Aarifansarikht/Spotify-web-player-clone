@@ -12,10 +12,11 @@ console.log(props.data);
             <div className="card_main">
                 <div className="card_top_container">
                 <div className="c_img">
+                    <img src={this.props.data.img} alt="" />
                     <Play/>
                 </div>
                 <h2>{this.props.data.h1}</h2>
-                <p >Lorem ipsum dolor sit amet consectetur  elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere quia ipsa sequi deleniti. Doloremque numquam incidunt sint eius eligendi perspiciatis, quam, quaerat provident expedita facilis exercitationem repellendus culpa debitis velit. </p>
+                <p >Lorem ipsum dolor sit amet consectetur  elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quisquam similique ipsa, officiis veritatis molestiae harum quam ab, quidem facilis amet sunt nisi ipsum praesentium? Beatae veritatis ratione maxime amet. </p>
                 </div>
             </div>
         );

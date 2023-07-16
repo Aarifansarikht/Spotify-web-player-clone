@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Card from '../common/Card';
-
+import img1 from '../Assets/img/img1.jpeg';
+import img2 from '../Assets/img/img2.jpeg';
+import img3 from '../Assets/img/img3.jpeg';
+import img4 from '../Assets/img/img4.jpeg';
 class Card_list extends Component {
   constructor(props) {
     super(props);
@@ -10,10 +13,10 @@ class Card_list extends Component {
     section1:[
       {
         card:[
-          {img: "red",h1:"blue",p:"lorem"},
-          {img: "red2",h1:"blue1",p:"lorem"},
-          {img: "red3",h1:"blue2",p:"lorem"},
-          {img: "red3",h1:"blue3",p:"lorem"},
+          {img: img1,h1:"Piecefil piano",p:"lorem"},
+          {img: img2,h1:"Deep Focus",p:"lorem"},
+          {img: img3,h1:"blue2",p:"lorem"},
+          {img:img4,h1:"blue3",p:"lorem"},
         ],
       }
     ],
