@@ -15,7 +15,7 @@ console.log(props.data);
                     <Play/>
                 </div>
                 <h2>{this.props.data.h1}</h2>
-                <p >Lorem ipsum dolor sit amet consectetur  elit. </p>
+                <p >Lorem ipsum dolor sit amet consectetur  elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere quia ipsa sequi deleniti. Doloremque numquam incidunt sint eius eligendi perspiciatis, quam, quaerat provident expedita facilis exercitationem repellendus culpa debitis velit. </p>
                 </div>
             </div>
         );
