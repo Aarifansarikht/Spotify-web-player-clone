@@ -258,13 +258,13 @@ html,body{
 .right_navbar_container{
     position: sticky;
     top: 0px;
-    display: flex;
     justify-content: space-between;
     padding: 0.8rem;
     border-radius: 8px 8px 0px 0px;
     align-items: center;
     background-color: #242424;
     z-index: 10;
+    display: flex;
 }
 .left_btns{
     display: flex;
@@ -500,12 +500,33 @@ html,body{
     background-color: aqua;
 }
 
-
+.crossicon{
+    display: none;
+}
 @media screen and (min-width:100px) and (max-width:768px) {
     .left_container{
         display: none;
     }
     .right_navbar_container{
+        position: relative;
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        position: absolute;
+        width: 98%;
+    }
+    .crossicon{
+        display: block;
+    }
+    .right_btns{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .left_btns{
         display: none;
     }
     .p_main{
@@ -532,5 +553,6 @@ html,body{
         justify-content: flex-start;
         flex-wrap: nowrap;
         overflow: auto;
-    }
+    }  
 }
+

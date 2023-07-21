@@ -6,8 +6,8 @@ import Mainheader from '../common/Mainheader';
 
 class Right_container extends Component {
 
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
     }
 
     state={
@@ -20,9 +20,9 @@ class Right_container extends Component {
         ]
     }
     render() {
+        
         return (
             <div>
-                <Right_navbar/>
                 <Mainheader/>
                 <div className="main_content">
                     {
@@ -34,8 +34,8 @@ class Right_container extends Component {
                                 </>
                                 ) 
                                 
-                        })
-                    }
+                            })
+                        }
                 <Right_footer/>
                 </div>
             </div>
