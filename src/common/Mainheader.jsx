@@ -6,22 +6,17 @@ import Right_navbar from './Right_navbar';
 class Mainheader extends Component {
     constructor(){
         super()
-        this.state ={
-            ham:true
-        }
-    }
-    
-   
-    func = ()=>{
-        this.setState({ham: !this.state.ham})
-       
-    }
+        this.barsbtn = React.createRef("none");
+    }   
+   handlebars = ()=>{
+        this.barsbtn.current.style.display ="flex";
+   }
     render() {
         return (
           <> 
            <header>
             <div className="head">
-            <div className="logo">
+            <div className="logo" ref={this.barsbtn}>
                     Spotify
                 </div>
                 <div className="right_nav">
@@ -31,13 +26,13 @@ class Mainheader extends Component {
                     <button>
                         OPEN&nbsp;APP
                     </button>
-                    <div className="bars" onClick={this.func}>
+                    <div  className="bars" onClick={this.handlebars}>
                     <FaBars/>
                     </div>
                 </div>
             </div>
             </header>
-            <Right_navbar ham = {this.state.ham} func = {this.func}/>
+            <Right_navbar barsbtn = {this.barsbtn}/>
           </>
         );
     }

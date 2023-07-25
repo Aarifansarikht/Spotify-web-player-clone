@@ -6,12 +6,13 @@ class Right_navbar extends Component {
     constructor(props){
         super(props)
         console.log(props);
+       
     }
    
     render() {
         return (
             <>
-            <div className="right_navbar_container" style={{display: this.props.ham?"flex":"none"}}>
+            <div className="right_navbar_container" ref={this.props.barsbtn}>
                 <div className="left_btns">
                     <div className="lbtn">
                         <BiChevronLeft/>
@@ -29,7 +30,15 @@ class Right_navbar extends Component {
                     </div>
                 </div>
                 <div className="crossicon" style={{color:"white",fontSize:"1.5rem",fontWeight:"700",position:"absolute",top:"15px",right:"15px"}}>
-                    <RxCross1 onClick={this.props.func}/>
+                    <RxCross1  onClick={()=>{
+                        if (this.props.barsbtn.current.style.display="flex") {
+                            
+                            this.props.barsbtn.current.style.display="none";
+                        }
+                        else{
+                            this.props.barsbtn.current.style.display="flex";
+                        }
+                    }}/>
                 </div>
             </div>
             </>
